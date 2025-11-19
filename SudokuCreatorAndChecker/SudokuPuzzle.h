@@ -9,13 +9,16 @@ public:
 	SudokuPuzzle() = delete;
 	SudokuPuzzle(int);
 
+	virtual void Check(int, int)=0; // int ROW, int COL // give cout reply
+	virtual SudokuPuzzle createPuzzle(int)=0; // int n //creates a puzzle of size nxn
+
 };
 
 class NineByNine : public SudokuPuzzle
 {
 private: 
-	std::array<std::array<int, 9>, 9> theGrid;
-	
+	std::array<std::array<int, 9>, 9> theGrid{};
+
 public:
 
 	std::array<std::array<int, 9>, 9> getGrid();
