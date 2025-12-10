@@ -25,6 +25,23 @@ std::ostream& operator << (std::ostream& os, const NineByNine& rhsPuzzle)
 	 */
 	
 	return os;
+	//std::setfill('0') or ('#')  // '#' is preferred 
+
+	os <<  " C 1 2 3 4 5 6 7 8 9\n"
+		<< "R  _ _ _ _ _ _ _ _ _\n"
+		<< "1 |" << "v3"/*vals 1-3*/ << "|" << "v6"/*vals 4-6*/ << "|" << "v9"/*vals 7-9*/ << "|\n"
+		<< "2 |"
+		<< "3 |"
+		<< "  |- - -+- - -+- - -|\n"
+		<< "4 |"
+		<< "5 |"
+		<< "6 |"
+		<< "  |- - -+- - -+- - -|\n"
+		<< "7 |"
+		<< "8 |"
+		<< "9 |"
+		<< "   - - - - - - - - -";
+
 }
 
 std::ostream& operator << (std::ostream& os, const FourByFour& rhsPuzzle)
@@ -51,7 +68,17 @@ std::ostream& operator << (std::ostream& os, const FourByFour& rhsPuzzle)
 		<< rhsPuzzle.bottomBorder << "\n";
 	return os;
 
+	
+	os << " C 1 2 3 4\n"
+		<< "R  _ _ _ _\n"
+		<< "1 |"
+		<< "2 |"
+		<< "  |- -+- -|\n"
+		<< "3 |"
+		<< "4 |"
+		<< "   - - - -";
 
+	return os; 
 }
 
 std::ostream& operator << (std::ostream& os, const SixteenBySixteen& rhsPuzzle)
