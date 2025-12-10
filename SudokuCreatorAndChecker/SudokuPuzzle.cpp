@@ -1,6 +1,7 @@
 #include "SudokuPuzzle.h"
 #include <iomanip>
 #include <cctype>
+#include <array>
 
 std::ostream& operator << (std::ostream& os, const NineByNine& rhsPuzzle)
 {
